@@ -999,7 +999,7 @@ br_error BR_CMETHOD_DECL(br_geometry_v1_model_soft, render)
 {
 	br_error r;
 
-	r = V1Model_Render(self, renderer, model, default_state, type, BR_FALSE);
+	// r = V1Model_Render(self, renderer, model, default_state, type, BR_FALSE);
 
 	return r;
 }
@@ -1011,7 +1011,7 @@ br_error BR_CMETHOD_DECL(br_geometry_v1_model_soft, renderOnScreen)
 {
 	br_error r;
 
-	r = V1Model_Render(self, renderer, model, default_state, type, BR_TRUE);
+	// r = V1Model_Render(self, renderer, model, default_state, type, BR_TRUE);
 
 	return r;
 }
