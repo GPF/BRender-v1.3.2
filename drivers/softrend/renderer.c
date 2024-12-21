@@ -95,10 +95,9 @@ static br_size_t BR_CALLBACK customPartsExtra(void *block, struct br_tv_template
 {
 	struct br_renderer *self = block;
 	br_size_t s;
-	br_token_value tv[] = {
-		{BRT_PARTS_TL,0},
-		{0,0}
-	};
+	br_token_value tv[] = {{
+		BRT_PARTS_TL
+	}};
 
 	/*
 	 * Find out size of primitive's list
@@ -193,7 +192,7 @@ br_renderer * RendererSoftAllocate(br_device *dev, struct br_renderer_facility *
 	 * Set valid bits from primitive library
 	 */
 	m = 0;
-	char c;
+	// char c;
 	ObjectQuery(self->plib, &m, BRT_PARTS_U32);
 
 	self->state.valid |= m;
@@ -315,7 +314,7 @@ static br_error BR_CMETHOD_DECL(br_renderer_soft, synchronise)
 	return PrimitiveLibrarySynchronise(self->plib, sync_type, block);
 }
 
-static br_error BR_CMETHOD_DECL(br_renderer_soft,commandModeSet)
+ br_error BR_CMETHOD_DECL(br_renderer_soft,commandModeSet)
 	(struct br_renderer *self, br_token mode)
 {
 	return BRE_FAIL;

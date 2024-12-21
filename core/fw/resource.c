@@ -23,11 +23,11 @@ BR_RCS_ID("$Id: resource.c 1.1 1997/12/10 16:41:10 jon Exp $")
 /*
  * The granularity of resource sizes
  */
-#define BR_RES_GRANULARITY_SHIFT	2
+#define BR_RES_GRANULARITY_SHIFT	5
 #define BR_RES_GRANULARITY			(1<<BR_RES_GRANULARITY_SHIFT)
 #define BR_RES_MAGIC				0xDEADBEEF
 
-#define BR_RES_DEFAULT_ALIGN		4
+#define BR_RES_DEFAULT_ALIGN		32
 
 /*
  * The control structure prepended onto resource blocks

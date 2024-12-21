@@ -17,7 +17,7 @@
  */
 typedef int64_t  br_int_64;
 typedef uint64_t br_uint_64;
-typedef int32_t  br_int_32;
+typedef int32_t  br_int_32 __attribute__((aligned(4)));;
 typedef uint32_t br_uint_32;
 typedef int16_t  br_int_16;
 typedef uint16_t br_uint_16;
@@ -458,7 +458,7 @@ typedef float br_float;
  * Reference methods in C
  */
 
-#define BR_CMETHOD(t,m)					(_M_##t##_##m)
+#define BR_CMETHOD(t, m) (_M_##t##_##m)
 #define BR_CMETHOD_REF(t,m) 		((void *)_M_##t##_##m)
 #define BR_CMETHOD_CALL(t,m,o) 		(((t *)(o))->dispatch->_##m)
 

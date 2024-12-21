@@ -383,11 +383,11 @@ void BR_ASM_CALL TriangleRender_ZTI_I8_D16_8(brp_block *block, ...) {
     // Not implemented
     BrAbort();
 }
-void BR_ASM_CALL TriangleRender_ZTI_I8_D16_16(brp_block *block, ...) {
+void BR_ASM_CALL TriangleRender_ZTI_I8_D16_16(brp_block *block, brp_vertex *v0, brp_vertex *v1,brp_vertex *v2) {
     // Not implemented
     BrAbort();
 }
-void BR_ASM_CALL TriangleRender_ZTI_I8_D16_32(brp_block *block, ...) {
+void BR_ASM_CALL TriangleRender_ZTI_I8_D16_32(brp_block *block, brp_vertex *v0, brp_vertex *v1,brp_vertex *v2) {
     // Not implemented
     BrAbort();
 }

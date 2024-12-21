@@ -44,5 +44,11 @@ target_sources(host INTERFACE
         FILES ${DDI_FILES}
         )
 
-target_include_directories(host PRIVATE .)
-target_link_libraries(host PRIVATE brender-inc-ddi ${CMAKE_DL_LIBS})
+target_include_directories(host PRIVATE .)        
+if(__DREAMCAST__)
+        target_link_libraries(host PRIVATE brender-inc-ddi)
+else()
+        target_link_libraries(host PRIVATE brender-inc-ddi ${CMAKE_DL_LIBS})
+endif()
+
+
